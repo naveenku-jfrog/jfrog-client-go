@@ -20,8 +20,8 @@ type JPDsStatsService struct {
 }
 
 type GenericError struct {
-	Product string `write:"-"`
-	Err     error  `write:"Error"`
+	Product string `log:"-"`
+	Err     error  `log:"Error"`
 }
 
 func NewJPDsStatsService(artDetails auth.ServiceDetails, client *jfroghttpclient.JfrogHttpClient) *JPDsStatsService {
